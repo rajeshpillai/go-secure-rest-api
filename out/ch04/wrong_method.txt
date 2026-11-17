@@ -1,0 +1,8 @@
+$ curl -si -X DELETE localhost:8080/books/2
+HTTP/1.1 405 Method Not Allowed
+Allow: GET, HEAD
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Content-Length: 19
+
+Method Not Allowed

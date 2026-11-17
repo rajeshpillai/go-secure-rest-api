@@ -1,0 +1,4 @@
+$ for id in 1 2 3; do curl -s -o /dev/null -w "%{http_code}\n" --cacert cert.pem -X DELETE https://localhost:8443/books/$id; done
+401
+401
+401

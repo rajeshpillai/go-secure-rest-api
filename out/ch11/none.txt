@@ -1,0 +1,5 @@
+$ NONE=$(go run ./tools/mint none)
+$ echo $NONE | cut -d. -f1 | basenc -d --base64url 2>/dev/null
+{"alg":"none","typ":"JWT"}
+$ curl -s localhost:8080/me -H "Authorization: Bearer $NONE"
+{"error":"invalid token"}

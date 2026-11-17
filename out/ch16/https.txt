@@ -1,0 +1,2 @@
+$ curl -s --cacert cert.pem https://localhost:8443/books
+{"error":"missing or invalid credentials"}

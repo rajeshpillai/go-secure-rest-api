@@ -1,0 +1,2 @@
+$ curl -s -X POST localhost:8080/login -d '{"email":"nobody@example.com","password":"bella-loves-old-books"}'
+{"error":"wrong email or password"}

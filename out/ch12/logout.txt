@@ -1,0 +1,8 @@
+$ LOGIN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}')
+$ TOKEN=$(echo $LOGIN | jq -r .access_token); R=$(echo $LOGIN | jq -r .refresh_token)
+$ curl -si -X POST localhost:8080/logout -d "{\"refresh_token\":\"$R\"}"
+HTTP/1.1 204 No Content
+$ curl -s -X POST localhost:8080/refresh -d "{\"refresh_token\":\"$R\"}"
+{"error":"invalid refresh token"}
+$ curl -s localhost:8080/me -H "Authorization: Bearer $TOKEN"
+{"user_id":1}

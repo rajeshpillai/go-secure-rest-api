@@ -1,0 +1,2 @@
+$ go test -race -count=1 ./ch06
+ok  	bookshelf/ch06	1.049s

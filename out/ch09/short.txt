@@ -1,0 +1,2 @@
+$ curl -s -X POST localhost:8080/register -d '{"email":"ana@example.com","password":"hunter2"}'
+{"error":"password must be 15 to 64 characters"}

@@ -1,0 +1,3 @@
+$ BELLA=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ curl -s localhost:8080/books -H "Authorization: Bearer $BELLA"
+[]

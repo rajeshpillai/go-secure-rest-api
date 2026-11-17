@@ -1,0 +1,9 @@
+$ go test ./ch17     # with the owner check removed
+--- FAIL: TestSecurity (0.15s)
+    --- FAIL: TestSecurity/Mallory_reads_Bella's_book (0.00s)
+        api_test.go:78: got 200, want 403 (map[author: id:1 owner_id:1 title:Dune])
+    --- FAIL: TestSecurity/Mallory_deletes_Bella's_book (0.00s)
+        api_test.go:78: got 204, want 403 (map[])
+FAIL
+FAIL	bookshelf/ch17	0.486s
+FAIL

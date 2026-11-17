@@ -1,0 +1,2 @@
+$ curl -s localhost:8080/books
+[{"id":1,"title":"The Go Programming Language","author":"Alan Donovan, Brian Kernighan"},{"id":2,"title":"Clean Code","author":"Robert C. Martin"},{"id":3,"title":"The Pragmatic Programmer","author":"Andrew Hunt, David Thomas"}]

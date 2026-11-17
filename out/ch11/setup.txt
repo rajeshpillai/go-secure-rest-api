@@ -1,0 +1,2 @@
+$ curl -s -X POST localhost:8080/register -d '{"email":"bella@example.com","password":"bella-loves-old-books"}'
+{"email":"bella@example.com","id":1}

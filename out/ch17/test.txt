@@ -1,0 +1,16 @@
+$ go test -race -count=1 -v ./ch17 2>&1 | grep -E '^(---|    ---|ok|PASS|FAIL)'
+--- PASS: TestSecurity (0.31s)
+    --- PASS: TestSecurity/no_credentials (0.00s)
+    --- PASS: TestSecurity/a_made-up_token (0.00s)
+    --- PASS: TestSecurity/a_made-up_API_key (0.00s)
+    --- PASS: TestSecurity/Bella_reads_her_book (0.00s)
+    --- PASS: TestSecurity/Mallory_reads_Bella's_book (0.00s)
+    --- PASS: TestSecurity/a_read_key_can_read (0.00s)
+    --- PASS: TestSecurity/a_read_key_cannot_write (0.00s)
+    --- PASS: TestSecurity/a_key_cannot_make_keys (0.00s)
+    --- PASS: TestSecurity/the_client_cannot_pick_the_id (0.00s)
+    --- PASS: TestSecurity/Mallory_deletes_Bella's_book (0.00s)
+--- PASS: TestLoginRateLimit (0.32s)
+--- PASS: TestRefreshTokenWorksOnce (0.14s)
+PASS
+ok  	bookshelf/ch17	1.905s

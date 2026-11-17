@@ -1,0 +1,16 @@
+INFO listening addr=:8080
+INFO request method=POST path=/register status=201 took=45.246ms
+INFO request method=POST path=/login status=200 took=31.73ms
+INFO request method=POST path=/login status=200 took=39.786ms
+INFO request method=POST path=/books status=401 took=63µs
+INFO request method=POST path=/login status=200 took=37.89ms
+INFO request method=POST path=/books status=201 took=301µs
+INFO request method=POST path=/login status=200 took=36.693ms
+INFO request method=GET path=/me status=200 took=106µs
+INFO request method=POST path=/login status=200 took=39.534ms
+WARN bad token err="token signature is invalid: signature is invalid"
+INFO request method=GET path=/me status=401 took=185µs
+WARN bad token err="token signature is invalid: signing method none is invalid"
+INFO request method=GET path=/me status=401 took=146µs
+WARN bad token err="token has invalid claims: token is expired"
+INFO request method=GET path=/me status=401 took=182µs

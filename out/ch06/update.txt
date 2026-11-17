@@ -1,0 +1,6 @@
+$ curl -si -X PUT localhost:8080/books/2 -d '{"title":"Clean Code (2nd ed.)","author":"Robert C. Martin"}'
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 68
+
+{"id":2,"title":"Clean Code (2nd ed.)","author":"Robert C. Martin"}

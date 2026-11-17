@@ -1,0 +1,3 @@
+$ go test -bench . -benchtime 50x ./ch09 | grep Benchmark
+BenchmarkSHA256-12      	      50	       234.8 ns/op
+BenchmarkArgon2id-12    	      50	  48498854 ns/op

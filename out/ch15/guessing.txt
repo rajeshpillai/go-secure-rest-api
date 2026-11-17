@@ -1,0 +1,8 @@
+$ for i in 1 2 3 4 5 6 7; do curl -s -o /dev/null -w "try $i: %{http_code}\n" -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"is-it-password-'$i'"}'; done
+try 1: 401
+try 2: 401
+try 3: 401
+try 4: 401
+try 5: 401
+try 6: 429
+try 7: 429

@@ -1,0 +1,7 @@
+$ TOKEN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ KEY=$(curl -s -X POST localhost:8080/keys -H "Authorization: Bearer $TOKEN" -d '{"name":"old laptop","scopes":["books:read"]}' | jq -r .key)
+$ ID=$(curl -s localhost:8080/keys -H "Authorization: Bearer $TOKEN" | jq '.[-1].id')
+$ curl -si -X DELETE localhost:8080/keys/$ID -H "Authorization: Bearer $TOKEN"
+HTTP/1.1 204 No Content
+$ curl -s localhost:8080/books -H "X-API-Key: $KEY"
+{"error":"missing or invalid credentials"}

@@ -1,0 +1,7 @@
+$ cat .gitignore
+.bin/
+.bugcheck/
+*/users.json
+*/cert.pem
+*/key.pem
+.env

@@ -1,0 +1,6 @@
+$ curl -si -X POST localhost:8080/register -d '{"email":"bella@example.com","password":"bella-loves-old-books"}'
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 37
+
+{"email":"bella@example.com","id":1}

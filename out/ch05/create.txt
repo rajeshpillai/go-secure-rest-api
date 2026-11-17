@@ -1,0 +1,6 @@
+$ curl -si -X POST localhost:8080/books -d '{"title":"Go in Action","author":"William Kennedy"}'
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 59
+
+{"id":4,"title":"Go in Action","author":"William Kennedy"}

@@ -1,0 +1,11 @@
+$ TOKEN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ curl -s -X POST localhost:8080/keys -H "Authorization: Bearer $TOKEN" -d '{"name":"backup script","scopes":["books:read"]}' | jq .
+{
+  "id": 1,
+  "key": "bk_MUSMICRIUFJIUYHD6KYCB7K3CN",
+  "prefix": "bk_MUSM",
+  "scopes": [
+    "books:read"
+  ],
+  "warning": "copy this key now: it will not be shown again"
+}

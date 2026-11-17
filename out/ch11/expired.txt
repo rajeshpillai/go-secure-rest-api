@@ -1,0 +1,3 @@
+$ OLD=$(go run ./tools/mint expired)
+$ curl -s localhost:8080/me -H "Authorization: Bearer $OLD"
+{"error":"invalid token"}

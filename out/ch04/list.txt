@@ -1,0 +1,4 @@
+$ curl -s localhost:8080/books
+1 The Go Programming Language
+2 Clean Code
+3 The Pragmatic Programmer

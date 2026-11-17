@@ -1,0 +1,2 @@
+$ curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}'
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJib29rc2hlbGYiLCJzdWIiOiIxIiwiZXhwIjoxNzk0OTQyMDUyLCJpYXQiOjE3OTQ5NDExNTJ9.wgTEiFztIF2_G8HxsjPox6eN_IWdgXa9e7VF8BqtXfE","token_type":"Bearer"}

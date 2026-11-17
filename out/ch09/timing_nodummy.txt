@@ -1,0 +1,4 @@
+$ curl -s -o /dev/null -w '%{time_total}s\n' -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"wrong-password-here"}'
+0.051571s
+$ curl -s -o /dev/null -w '%{time_total}s\n' -X POST localhost:8080/login -d '{"email":"nobody@example.com","password":"wrong-password-here"}'
+0.000589s

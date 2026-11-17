@@ -1,0 +1,6 @@
+$ curl -si -X POST localhost:8080/books -d '{"title":'
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Content-Length: 27
+
+{"error":"unexpected EOF"}

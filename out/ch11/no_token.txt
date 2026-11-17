@@ -1,0 +1,7 @@
+$ curl -si -X POST localhost:8080/books -d '{"title":"Go in Action"}'
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+Www-Authenticate: Bearer
+Content-Length: 26
+
+{"error":"missing token"}

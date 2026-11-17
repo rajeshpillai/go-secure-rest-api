@@ -1,0 +1,18 @@
+$ cat users.json
+[
+  {
+    "id": 1,
+    "email": "bella@example.com",
+    "password_hash": "$argon2id$v=19$m=19456,t=2,p=1$f3Fxrpejn5H4iWtD4y+ZsQ$DhcL16X7dHFxVH11RW9x+3xRgTKzwx7T2auoB99fTEc"
+  },
+  {
+    "id": 2,
+    "email": "sam@example.com",
+    "password_hash": "$argon2id$v=19$m=19456,t=2,p=1$m0xfsovmJEvSHLhpEIRjCQ$Zv/Wt5jCGu3MpgzzCQfKyve8wlP/6G01OsDdP188hdE"
+  },
+  {
+    "id": 3,
+    "email": "kim@example.com",
+    "password_hash": "$argon2id$v=19$m=19456,t=2,p=1$4ETofOMyUbRUM6RRmWy9xg$9c8xdPbzqC/t8+TPnMSCH2AmieIhmhI6sFWpL/vq7F0"
+  }
+]

@@ -1,0 +1,11 @@
+$ R1=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .refresh_token)
+$ R2=$(curl -s -X POST localhost:8080/refresh -d "{\"refresh_token\":\"$R1\"}" | jq -r .refresh_token); echo $R2
+M5LB7TATD45GMY4MJ2CCEJYZBE
+$ curl -si -X POST localhost:8080/refresh -d "{\"refresh_token\":\"$R1\"}"
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+Content-Length: 34
+
+{"error":"invalid refresh token"}
+$ curl -s -X POST localhost:8080/refresh -d "{\"refresh_token\":\"$R2\"}"
+{"error":"invalid refresh token"}

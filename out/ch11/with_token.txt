@@ -1,0 +1,7 @@
+$ TOKEN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ curl -si -X POST localhost:8080/books -H "Authorization: Bearer $TOKEN" -d '{"title":"Go in Action"}'
+HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 44
+
+{"id":4,"title":"Go in Action","author":""}

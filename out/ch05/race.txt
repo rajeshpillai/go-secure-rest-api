@@ -1,0 +1,6 @@
+$ go test -race ./ch05 2>&1 | grep -m1 -A3 'DATA RACE'; go test -race ./ch05 2>&1 | tail -1
+WARNING: DATA RACE
+Read at 0x000000d40980 by goroutine 73:
+  bookshelf/ch05.createBook()
+      ./ch05/books.go:56 +0x278
+FAIL

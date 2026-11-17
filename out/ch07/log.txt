@@ -1,0 +1,6 @@
+INFO listening addr=:8080
+INFO request method=GET path=/books/1 status=200 took=73µs
+INFO request method=GET path=/books/42 status=404 took=84µs
+ERROR panic err="runtime error: invalid memory address or nil pointer dereference" path=/oops
+INFO request method=GET path=/oops status=500 took=158µs
+INFO request method=GET path=/books/2 status=200 took=31µs

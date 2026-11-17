@@ -1,0 +1,14 @@
+$ TOKEN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ KEY=$(curl -s -X POST localhost:8080/keys -H "Authorization: Bearer $TOKEN" -d '{"name":"reader","scopes":["books:read"]}' | jq -r .key)
+$ curl -s localhost:8080/books -H "X-API-Key: $KEY"
+[{"id":1,"title":"The Go Programming Language","author":"Alan Donovan, Brian Kernighan"},{"id":2,"title":"Clean Code","author":"Robert C. Martin"},{"id":3,"title":"The Pragmatic Programmer","author":"Andrew Hunt, David Thomas"}]
+$ curl -si -X POST localhost:8080/books -H "X-API-Key: $KEY" -d '{"title":"Hack"}'
+HTTP/1.1 403 Forbidden
+Content-Type: application/json
+Content-Length: 38
+
+{"error":"missing scope books:write"}
+$ curl -s -X POST localhost:8080/keys -H "X-API-Key: $KEY" -d '{"name":"more","scopes":["books:write"]}'
+{"error":"missing scope keys:manage"}
+$ curl -s localhost:8080/me -H "X-API-Key: $KEY"
+{"user_id":1,"scopes":["books:read"]}

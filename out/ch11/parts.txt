@@ -1,0 +1,5 @@
+$ TOKEN=$(curl -s -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-old-books"}' | jq -r .access_token)
+$ echo $TOKEN | cut -d. -f1 | basenc -d --base64url
+{"alg":"HS256","typ":"JWT"}
+$ echo $TOKEN | cut -d. -f2 | basenc -d --base64url
+{"iss":"bookshelf","sub":"1","exp":1794942052,"iat":1794941152}

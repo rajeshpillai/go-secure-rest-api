@@ -1,0 +1,13 @@
+$ cat users.json
+[
+  {
+    "id": 1,
+    "email": "bella@example.com",
+    "password": "bella-loves-old-books"
+  },
+  {
+    "id": 2,
+    "email": "sam@example.com",
+    "password": "correct horse battery staple"
+  }
+]

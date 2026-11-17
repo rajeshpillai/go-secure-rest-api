@@ -1,0 +1,6 @@
+$ curl -si -X POST localhost:8080/login -d '{"email":"bella@example.com","password":"bella-loves-new-books"}'
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+Content-Length: 36
+
+{"error":"wrong email or password"}
